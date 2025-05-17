@@ -1,0 +1,16 @@
+{
+    "helloWorld": "Привіт!",
+    "language": "Мова",
+    "home": "Дім",
+      "diary": "Щоденник",
+      "settings": "Налаштування",
+      "memories": "спогади",
+      "upcomingPlans": "Майбутні плани",
+      "addNewTask": "Додати нове завдання",
+      "helloUser": "Привіт {name}!",
+      "@helloUser": {
+          "placeholders": {
+            "name": {}
+          }
+        }
+}

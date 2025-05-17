@@ -1,0 +1,16 @@
+{
+  "helloWorld": "Hello World!",
+  "language": "Language",
+  "home": "Home",
+  "diary": "Diary",
+  "settings": "Settings",
+  "memories": "memories",
+  "upcomingPlans": "Upcoming plans",
+  "addNewTask": "Add new task",
+  "helloUser": "Hello {name}",
+  "@helloUser": {
+      "placeholders": {
+        "name": {}
+      }
+    }
+}

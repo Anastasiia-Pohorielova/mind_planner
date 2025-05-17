@@ -1,0 +1,31 @@
+[{
+  "date": "27-08-2023",
+  "title": "Best day",
+  "content": "Very exciting promotion at my work",
+  "mood": "exciting"
+},
+  {
+    "date": "20-08-2024",
+    "title": "Best day",
+    "content": "Very exciting promotion at my work",
+    "mood": "exciting"
+  },
+  {
+    "date": "01-01-2025",
+    "title": "Stressed",
+    "content": "Very exciting promotion at my work",
+    "mood": "stress"
+  },
+  {
+    "date": "10-02-2025",
+    "title": "Sick",
+    "content": "Very exciting promotion at my work",
+    "mood": "sick"
+  },
+  {
+    "date": "13-04-2025",
+    "title": "Vacation",
+    "content": "Very exciting promotion at my work",
+    "mood": "good"
+  }
+]

@@ -1,0 +1,36 @@
+[{
+  "id": "id1",
+  "date": "2023-10-23T18:25:43.511Z",
+  "title": "Best day",
+  "content": "Very exciting promotion at my work to feel happy and luck and good",
+  "mood": "exciting"
+},
+  {
+    "id": "id2",
+    "date": "2023-01-01T18:25:43.511Z",
+    "title": "Best day",
+    "content": "Very exciting promotion at my work",
+    "mood": "exciting"
+  },
+  {
+    "id": "id3",
+    "date": "2024-11-01T18:25:43.511Z",
+    "title": "Stressed",
+    "content": "Very exciting promotion at my work",
+    "mood": "stress"
+  },
+  {
+    "id": "id4",
+    "date": "2025-01-01T18:25:43.511Z",
+    "title": "Sick",
+    "content": "Very exciting promotion at my work",
+    "mood": "sick"
+  },
+  {
+    "id": "id5",
+    "date": "2025-04-23T18:25:43.511Z",
+    "title": "Vacation",
+    "content": "Very exciting promotion at my work",
+    "mood": "good"
+  }
+]
