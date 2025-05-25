@@ -31,5 +31,11 @@ class MockDiaryService implements DiaryService {
     return Future.value(database.diaryEntries);
   }
 
+  @override
+  Future<void> deleteDiaryEntry({required String entryId}) {
+    database.diaryEntries.removeWhere((el) => el.id == entryId);
+    return Future.value();
+  }
+
 
 }

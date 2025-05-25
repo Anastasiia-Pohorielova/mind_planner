@@ -27,4 +27,9 @@ class DiaryRepository {
     print(data);
     return data;
   }
+
+  Future<void> deleteDiaryEntry(String entryId) async {
+    print('here');
+    await _diaryService.deleteDiaryEntry(entryId: entryId);
+  }
 }

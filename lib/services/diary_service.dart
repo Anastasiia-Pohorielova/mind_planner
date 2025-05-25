@@ -19,4 +19,7 @@ abstract class DiaryService {
 
   @PUT('entries')
   Future<DiaryEntry> editDiaryEntry({@Body() required DiaryEntry entry});
+
+  @DELETE('entries')
+  Future<void> deleteDiaryEntry({@Body() required String entryId});
 }

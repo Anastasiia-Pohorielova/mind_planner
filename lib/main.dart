@@ -7,6 +7,7 @@ import 'package:mind_planner/mock_services/mock_diary_service.dart';
 import 'package:mind_planner/mock_services/mock_service_factory.dart';
 import 'package:mind_planner/presentation/bloc/diary_cubit.dart';
 import 'package:mind_planner/repositories/diary_repository.dart';
+import 'package:mind_planner/res/styles/colors.dart';
 import 'package:mind_planner/services/diary_service.dart';
 import 'package:mind_planner/services/service_factory.dart';
 import 'package:mind_planner/utils/mock_interceptor.dart';
@@ -58,6 +59,9 @@ class MyApp extends StatelessWidget {
             supportedLocales: AppLocalizations.supportedLocales,
             theme: ThemeData(
               primarySwatch: Colors.blue,
+              bottomSheetTheme: const BottomSheetThemeData(
+                dragHandleColor: MindColors.white,
+              ),
             ),
             locale: context.read<LocaleCubit>().locale,
             routerConfig: router,

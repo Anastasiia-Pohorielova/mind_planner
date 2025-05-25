@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mind_planner/presentation/home_page/components/calendar_view.dart';
 import 'package:mind_planner/presentation/layouts/main_layout.dart';
 import 'package:mind_planner/res/styles/colors.dart';
 
@@ -32,56 +33,72 @@ class _HomePageState extends State<HomePage> {
 
     return MainLayout(
       customAppBar: AppBar(
-        // color:
-        backgroundColor: MindColors.secondary,
+        centerTitle: false,
+        backgroundColor: MindColors.white,
         title: Text(
-         t.helloUser('Nastia'),
+          'My calendar',
           style: MindTextStyles.s34fw500,
+          textAlign: TextAlign.start,
         ),
+        automaticallyImplyLeading: false,
       ),
-      floatingActionButton:  FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         backgroundColor: MindColors.primary,
         tooltip: 'Increment',
-        onPressed: (){},
+        onPressed: () {},
         child: const Icon(Icons.add, color: Colors.white, size: 28),
       ),
       body: Container(
         color: MindColors.white,
         margin: const EdgeInsets.all(8),
         child: Column(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const Expanded(child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: CalendarView(),
+              )),
               Text(
                 t.upcomingPlans,
                 style: MindTextStyles.s18fw500,
               ),
-              for(int i = 0; i<upcomingPlans.length; i++)...[
+              for (int i = 0; i < upcomingPlans.length; i++) ...[
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   decoration: const BoxDecoration(
                     color: MindColors.primary,
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
                   ),
-                  child: Row(children: [
-                    Text('${upcomingPlans[i].date.hour}:${upcomingPlans[i].date.minute}'),
-                    const SizedBox(width: 16,),
-                    Text(upcomingPlans[i].content)
-                  ],),
+                  child: Row(
+                    children: [
+                      Text(
+                          '${upcomingPlans[i].date.hour}:${upcomingPlans[i].date.minute}'),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      Text(upcomingPlans[i].content)
+                    ],
+                  ),
                 )
               ],
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(t.addNewTask, style: MindTextStyles.s18fw500,),
-                    IconButton(
-                        onPressed: () {},
-                        iconSize: 40,
-                        icon: const Icon(Icons.add),
-                    )
-                  ],
-                )
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    t.addNewTask,
+                    style: MindTextStyles.s18fw500,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    iconSize: 40,
+                    icon: const Icon(Icons.add),
+                  )
+                ],
+              )
             ]),
       ),
     );

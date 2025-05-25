@@ -34,4 +34,12 @@ class DiaryCubit extends Cubit<DiaryState> {
     emit(DiarySucceeded([_entry]));
   }
 
+  void deleteDiaryEntry(String entryId) async {
+    emit(DiaryLoading());
+    print('del');
+    final _entry = await diaryRepository.deleteDiaryEntry(entryId);
+
+    emit(DiarySucceeded(null));
+  }
+
 }

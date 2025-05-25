@@ -3,8 +3,6 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mind_planner/presentation/components/entry_card.dart';
-import 'package:mind_planner/presentation/diary_page/edit_entry_screen.dart';
-import 'package:mind_planner/res/styles/colors.dart';
 import 'package:mind_planner/utils/router.dart';
 
 import '../../models/diary_entry_model.dart';
@@ -63,42 +61,17 @@ class _ProfilePageState extends State<DiaryPage> {
                           children: [
                             Text(formatToMonthYear(_getDates()[index])),
                             Text(
-                                '${_monthEntriesCount(state.entries, _getDates()[index])} ${t.memories}')
+                                '${_monthEntriesCount(state.entries!, _getDates()[index])} ${t.memories}')
                           ],
                         ),
                       ),
                       for (int i = 0;
                           i <
-                              monthEntries(state.entries, _getDates()[index])
+                              monthEntries(state.entries!, _getDates()[index])
                                   .length;
                           i++) ...[
-                        Dismissible(
-                          key: Key('$i'),
-                          onDismissed: (direction) {
-                  // Remove the item from the data source.
-                  setState(() {
-                    context.read<DiaryCubit>().
-                  });
-
-                  // Then show a snackbar.
-                  ScaffoldMessenger.of(
-                  context,
-                  ).showSnackBar(const SnackBar(content: Text('Deleted')));
-                  },
-                          child: InkWell(
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (ctx) => EditEntryScreen(
-                                  monthEntries(
-                                      state.entries, _getDates()[index])[i],
-                                ),
-                              ),
-                            ),
-                            child: EntryCard(monthEntries(
-                                state.entries, _getDates()[index])[i]),
-                          ),
-                        )
+                        EntryCard(monthEntries(
+                            state.entries!, _getDates()[index])[i])
                       ]
                     ],
                   );
